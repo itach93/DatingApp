@@ -22,11 +22,13 @@ namespace DatingApp.API.Data
             builder.Entity<Like>().HasOne(u => u.Liker).WithMany(u => u.Likees).HasForeignKey(u => u.LikerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Message>().HasOne(u => u.Sender)
+             builder.Entity<Message>()
+                .HasOne(u => u.Sender)
                 .WithMany(m => m.MessageSent)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Message>().HasOne(u => u.Recipient)
+            builder.Entity<Message>()
+                .HasOne(u => u.Recipient)
                 .WithMany(m => m.MessageReceived)
                 .OnDelete(DeleteBehavior.Restrict);
        }
