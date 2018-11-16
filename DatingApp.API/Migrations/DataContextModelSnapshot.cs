@@ -14,7 +14,12 @@ namespace DatingApp.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "2.1.1-rtm-30846");
+=======
+                .HasAnnotation("ProductVersion", "2.1.3-rtm-32065")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
 
             modelBuilder.Entity("DatingApp.API.Models.Like", b =>
                 {
@@ -83,6 +88,7 @@ namespace DatingApp.API.Migrations
                     b.ToTable("Photos");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("DatingApp.API.Models.Role", b =>
                 {
                     b.Property<int>("Id")
@@ -106,11 +112,14 @@ namespace DatingApp.API.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
+=======
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
             modelBuilder.Entity("DatingApp.API.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+<<<<<<< HEAD
                     b.Property<int>("AccessFailedCount");
 
                     b.Property<string>("City");
@@ -118,17 +127,24 @@ namespace DatingApp.API.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+=======
+                    b.Property<string>("City");
+
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
                     b.Property<string>("Country");
 
                     b.Property<DateTime>("Created");
 
                     b.Property<DateTime>("DateOfBirth");
 
+<<<<<<< HEAD
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
 
+=======
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
                     b.Property<string>("Gender");
 
                     b.Property<string>("Interests");
@@ -139,6 +155,7 @@ namespace DatingApp.API.Migrations
 
                     b.Property<DateTime>("LastActive");
 
+<<<<<<< HEAD
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
@@ -187,6 +204,19 @@ namespace DatingApp.API.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+=======
+                    b.Property<string>("LookingFor");
+
+                    b.Property<byte[]>("PasswordHash");
+
+                    b.Property<byte[]>("PasswordSalt");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
                 });
 
             modelBuilder.Entity("DatingApp.API.Models.Value", b =>
@@ -201,6 +231,7 @@ namespace DatingApp.API.Migrations
                     b.ToTable("Values");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
@@ -269,6 +300,8 @@ namespace DatingApp.API.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+=======
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
             modelBuilder.Entity("DatingApp.API.Models.Like", b =>
                 {
                     b.HasOne("DatingApp.API.Models.User", "Likee")
@@ -302,6 +335,7 @@ namespace DatingApp.API.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
+<<<<<<< HEAD
 
             modelBuilder.Entity("DatingApp.API.Models.UserRole", b =>
                 {
@@ -347,6 +381,8 @@ namespace DatingApp.API.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
+=======
+>>>>>>> 4f6a9ebc1206f60bbd40a6ef6da982690917684e
 #pragma warning restore 612, 618
         }
     }
