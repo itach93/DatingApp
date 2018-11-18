@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatingApp.API.Migrations
 {
-    public partial class IndentityInitial : Migration
+    public partial class SqliteInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -137,8 +137,8 @@ namespace DatingApp.API.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    RoleId = table.Column<int>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    UserId = table.Column<int>(nullable: false),
+                    RoleId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
