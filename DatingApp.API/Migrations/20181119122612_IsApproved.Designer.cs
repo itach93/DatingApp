@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181118154134_SqliteInitial")]
-    partial class SqliteInitial
+    [Migration("20181119122612_IsApproved")]
+    partial class IsApproved
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
+                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846");
 
             modelBuilder.Entity("DatingApp.API.Models.Like", b =>
                 {
@@ -69,6 +69,8 @@ namespace DatingApp.API.Migrations
                     b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Description");
+
+                    b.Property<bool>("IsApproved");
 
                     b.Property<bool>("IsMain");
 
